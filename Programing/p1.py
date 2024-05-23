@@ -46,4 +46,4 @@ print(subjectMarks)
 subjectMarks.pop()
 print(subjectMarks)
 for marks in subjectMarks:
-    print(marks)
+    print(marks, end = " ")
