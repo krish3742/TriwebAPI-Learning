@@ -7,7 +7,7 @@
   </head>
   <body>
     <h2 style="font-size: large">User Registration Form</h2>
-    <form action="/HTML/form.text">
+    <form action="/HTML/action.php">
       <label for="fname">First name:</label>
       <br />
       <input
@@ -57,16 +57,20 @@
       <br />
       <input type="number" id="age" name="age" placeholder="Enter your age" />
       <br />
-      <label for="gender">
-        Select your Gender:
-        <br />
+      <label for="gender"> Select your Gender: </label>
+      <br />
+      <label for="male">
         <input type="radio" id="male" name="gender" value="male" />Male
-        <br />
-        <input type="radio" id="female" name="gender" value="female" />Female
-        <br />
-        <input type="radio" id="other" name="gender" value="other" />Other
-        <br />
       </label>
+      <br />
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female" />Female
+      </label>
+      <br />
+      <label for="other">
+        <input type="radio" id="other" name="gender" value="other" />Other
+      </label>
+      <br />
       <label for="resume">Resume:</label>
       <br />
       <input type="file" id="resume" name="resume" />
