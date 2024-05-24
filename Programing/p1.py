@@ -47,4 +47,3 @@ subjectMarks.pop()
 print(subjectMarks)
 for marks in subjectMarks:
     print(marks, end = " ")
-
