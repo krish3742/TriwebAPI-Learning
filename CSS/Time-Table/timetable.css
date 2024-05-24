@@ -1,0 +1,21 @@
+* {
+  margin-left: 0;
+  padding: 0;
+  background-color: brown;
+  text-align: center;
+  color: black;
+}
+
+div {
+  margin-left: 475px;
+  margin-top: 20px;
+}
+
+caption,
+table,
+th,
+td {
+  border: 1.5px solid black;
+  padding: 5px;
+  background-color: rgb(242, 245, 31);
+}
