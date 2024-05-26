@@ -58,18 +58,3 @@ let multiply = arrNo.reduce((prev, curr) => {
 })
 console.log(sum);
 console.log(multiply);
-
-
-let twoSum = function(nums, target) {
-    let numsLength = nums.length;
-    let i;
-    for(i = 0; i < nums.length; i++) {
-        if(nums[i] + nums[i+1] == target) {
-            break;
-        }
-    }
-    let result = [i, i+1];
-    return result;
-};
-
-console.log(twoSum);
