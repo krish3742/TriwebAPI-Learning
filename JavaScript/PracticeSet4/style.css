@@ -1,0 +1,19 @@
+div {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: pink;
+    border: 1.5px solid black;
+}
+
+.para {
+    font-size: large;
+    display: inline-block;
+}
+
+.newPara {
+    background-color: brown;
+    color: yellow;   
+}
