@@ -30,3 +30,26 @@ console.log(eval(a));
 
 let x = (1,2,3,4);
 console.log(x);
+
+let obj = {
+    fullName: "Kshitij Agrawal",
+    mobile: 6389769480,
+};
+
+if('fullName' in obj) {   // true
+    console.log(obj.fullName);
+}
+
+if('name' in obj) {    // false
+    console.log(obj.mobile);
+}
+
+function xyz() {
+    this.x = 5;
+}
+
+let newObj = new xyz();
+console.log(newObj);
+
+console.log(newObj instanceof xyz); // true
+console.log(obj instanceof xyz); // false
