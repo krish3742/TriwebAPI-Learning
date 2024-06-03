@@ -29,4 +29,4 @@ let a = '1+2';
 console.log(eval(a));
 
 let x = (1,2,3,4);
-console.log(x);
+console.log(a);
