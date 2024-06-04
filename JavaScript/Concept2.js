@@ -69,4 +69,25 @@ let obj1 = {
 };
 console.log(obj1.FullName);
 obj1.mobile = 6389769480;
-console.log(obj1);
+// console.log(obj1.name); 
+
+console.log();
+//WeakMap
+// let o = {'FullName': 'Kshitij'};
+// let newName = {[o]: 'newO'};
+// console.log(newName); 
+// console.log(newName[o]);
+
+
+let set = new Set([1, 2, 5, 5, 7, 7, 9]);
+console.log(set);
+set.add(15);
+set.add('Foo');
+console.log(set);
+
+let newSet = new Set();
+newSet.add(13);
+newSet.add(15);
+newSet.add(15);
+newSet.add(16);
+console.log(newSet);
