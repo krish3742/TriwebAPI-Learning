@@ -56,3 +56,17 @@ console.log(obj instanceof xyz); // false
 
 let str = new String("Hello");
 console.log(str.charAt(0));
+
+let map = new Map();
+console.log(map);
+map.set('Name', 'Kshitij Agrawal');
+map.set('Mobile', 6389769480);
+console.log(map);
+console.log(map.get('Name'));
+
+let obj1 = {
+    FullName: 'Kshitij', 
+};
+console.log(obj1.FullName);
+obj1.mobile = 6389769480;
+console.log(obj1);
