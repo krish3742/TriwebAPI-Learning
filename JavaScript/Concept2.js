@@ -53,3 +53,6 @@ console.log(newObj);
 
 console.log(newObj instanceof xyz); // true
 console.log(obj instanceof xyz); // false
+
+let str = new String("Hello");
+console.log(str.charAt(0));
