@@ -71,6 +71,10 @@ console.log(obj1.FullName);
 obj1.mobile = 6389769480;
 // console.log(obj1.name); 
 
+let obj2 = new Object();
+obj2.make = 'Hello';
+console.log(obj2);
+
 console.log();
 //WeakMap
 // let o = {'FullName': 'Kshitij'};
