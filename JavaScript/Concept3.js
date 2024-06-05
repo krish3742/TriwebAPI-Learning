@@ -31,3 +31,15 @@ let kshitij = Object.create(getSet);
 kshitij.setAge = 22;
 kshitij.getAge;
 console.log(kshitij);
+
+function* makeIterator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+const iter = makeIterator();
+
+console.log(iter);
+for (const itItem of iter) {
+    console.log(itItem);
+}
