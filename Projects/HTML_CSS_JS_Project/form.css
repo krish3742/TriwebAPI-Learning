@@ -1,0 +1,73 @@
+.form {
+  width: 300px;
+  height: 500px;
+  border: 1.5px solid #000000;
+  background-color: rgb(189, 117, 82);
+  color: whitesmoke;
+  position: relative;
+  top: 20px;
+  left: 460px;
+}
+
+.details {
+  background-color: rgb(189, 117, 82);
+}
+
+h2 {
+  text-align: center;
+}
+
+.details {
+  margin-left: 10px;
+}
+
+#fname {
+  margin-left: 18px;
+}
+
+#lname {
+  margin-left: 20px;
+}
+
+#email {
+  margin-left: 48px;
+}
+
+#contact {
+  margin-left: 12px;
+}
+
+#birthday {
+  margin-left: 1px;
+}
+
+#age {
+  margin-left: 60px;
+}
+
+#resume {
+  margin-left: 20px;
+}
+
+#resume-file {
+  display: flex;
+}
+
+#resume {
+  margin-left: 40px;
+}
+
+#feedback {
+  height: 50px;
+  width: 90%;
+}
+
+#submit-reset {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 38px;
+}
+
+body {
+  outline: none;
+}
