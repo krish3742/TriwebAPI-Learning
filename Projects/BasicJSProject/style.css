@@ -86,3 +86,11 @@ button:hover {
     cursor: pointer;
     border: 1.5px solid black;
 }
+
+p {
+    font-size: 1.5rem;
+}
+
+button:disabled {
+    border: 1.5px solid transparent;
+}
