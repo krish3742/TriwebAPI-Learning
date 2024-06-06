@@ -29,3 +29,27 @@ newSet.add(15);
 newSet.add(15);
 newSet.add(16);
 console.log(newSet);
+
+class car {
+    constructor(brand) {
+        console.log("I am constructor");
+        this.brandName = brand;
+    }
+    start() {
+        console.log("I am starting");
+    }
+    stop() {
+        console.log("I am stopped");
+    }
+    printBrand() {
+        console.log(`My brand is ${this.brandName}`);
+    }
+}
+
+let thar = new car("Thar");
+console.log(typeof thar);
+thar.printBrand();
+thar.start();
+thar.stop();
+let fortuner = new car();
+fortuner.printBrand();
