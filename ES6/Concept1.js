@@ -21,5 +21,15 @@ console.log(multiplyNumbers(5, 6));
 console.log(addTwoNumbers);
 console.log(multiplyNumbers);
 multiplyNumbers = 7;
-console.log(multiplyNumbers(5, 6));
+console.log(multiplyNumbers);
 
+function add3(...arr) {
+    let sum = 0;
+    console.log(arr);
+    console.log(...arr);
+    arr.forEach((ele) => {
+        sum += ele;
+    })
+    console.log(sum);
+}
+add3(1,2,3,4,5);
