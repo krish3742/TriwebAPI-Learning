@@ -53,3 +53,15 @@ thar.start();
 thar.stop();
 let fortuner = new car();
 fortuner.printBrand();
+
+const getPromise = () => {
+    return new Promise((resolve, reject) => { 
+        console.log("I am promise");
+        resolve("Success");
+    })
+}
+
+getPromise()
+    .then((value) => {
+        console.log(value);
+    })
