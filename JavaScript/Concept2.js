@@ -17,6 +17,8 @@ function add2() {
 
 function add3(...arr) {
     let sum = 0;
+    console.log(arr);
+    console.log(...arr);
     arr.forEach((ele) => {
         sum += ele;
     })
