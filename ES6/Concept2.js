@@ -57,11 +57,15 @@ fortuner.printBrand();
 const getPromise = () => {
     return new Promise((resolve, reject) => { 
         console.log("I am promise");
-        resolve("Success");
+        // resolve("Success");
+        reject();
     })
 }
 
 getPromise()
     .then((value) => {
         console.log(value);
+    })
+    .catch((value) => {
+        console.log("Error");
     })
