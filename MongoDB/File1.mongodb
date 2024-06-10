@@ -25,3 +25,7 @@ db.inventory.updateMany(
     { qty: "25" },
     { $set: { status: "P" } }
 )
+
+db.inventory.deleteOne({qty: 16})
+
+db.inventory.deleteMany({}) //it will delete all records from inventory database
