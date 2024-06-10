@@ -31,3 +31,9 @@ db.inventory.deleteOne({qty: 16})
 //db.inventory.deleteMany({}) //it will delete all records from inventory database
 
 db.inventory.find().limit(1)// it will show 1st record from inventory database
+
+db.inventory.find().skip(2)// it will skip first 2 records and show other records from inventory database
+
+db.inventory.find().sort({qty: 1})// it will sort the inventory database according to the quantity in ascending order
+
+db.inventory.find().sort({qty: -1})// it will sort the inventory database according to the quantity in descending order
