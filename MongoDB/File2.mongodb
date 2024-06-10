@@ -1,0 +1,9 @@
+use sample
+
+db.customers.aggregate([
+    {$lookup: 
+        {from: "books", localField: "FavBooks", foreignFeild: "_id", as: "FavoriteBooks"}
+    
+    }
+])
+
