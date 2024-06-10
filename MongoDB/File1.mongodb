@@ -1,5 +1,17 @@
-use inventory
+use inventory // created database
 
 db.inventory.insertOne(
     {item: "canvas", qty: 100, name: "cotton"}
-)
+) // inserted one record at once
+
+db.inventory.insertMany([
+    { item: "journal", qty: 25, color: "black" } ,
+    { item: "mat", qty: 85, color: "gray" } ,
+    { item: "mousepad", qty: 25, color: "blue" }
+]) // inserted many records at once
+
+db.inventory.find( {} ) // fetch all records from inventory database
+
+db.inventory.find( { qty: {$lt : 30 } } ) // less than
+
+db.inventory.find( { item: "mat", qty: {$lt : 30 } } ) // and
