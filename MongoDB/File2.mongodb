@@ -7,3 +7,23 @@ db.customers.aggregate([
     }
 ])
 
+db.createCollection('Home', {validator: {
+    $jsonSchema: {
+        bsonType: 'Object', 
+        required: ['Name', 'Age', 'Mobile_No'],
+        properties: {
+            name: {
+                bsonType: 'string',
+                description: 'Enter name...'
+            },
+            age: {
+                bsonType: 'int'
+                description: 'Enter age...'
+            },
+            Mobile_No: {
+                bsonType: 'string',
+                description: 'Enter mobile number...'
+            }
+        }
+    }
+}})
