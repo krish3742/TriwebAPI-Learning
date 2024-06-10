@@ -28,4 +28,6 @@ db.inventory.updateMany(
 
 db.inventory.deleteOne({qty: 16})
 
-db.inventory.deleteMany({}) //it will delete all records from inventory database
+//db.inventory.deleteMany({}) //it will delete all records from inventory database
+
+db.inventory.find().limit(1)// it will show 1st record from inventory database
