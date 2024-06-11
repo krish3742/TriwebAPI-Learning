@@ -1,3 +1,21 @@
-# CSS
+# TriwebAPI Internship
+This folder consist my project - Personal TimeTable, using HTML and CSS.
 
-All the projects made on CSS are available in this folder.
+[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/krish3742/TriwebAPI-Learning/) [![GitHub Issues](https://img.shields.io/github/issues/krish3742/TriwebAPI-Learning.svg)](https://github.com/krish3742/TriwebAPI-Learning/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/krish3742/TriwebAPI-Learning.svg)](https://github.com/krish3742/TriwebAPI-Learning/pulls) [![CCO License](https://img.shields.io/badge/license-CCO-yellow.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+## Table of Contents
+
+ - Features
+ - Acknowledgements
+
+## Features
+
+In this project, I have made project on Personal TimeTable.
+
+1. Showing my personal table with time and routines using table tag.
+2. Added styling to it using CSS.
+
+## Acknowledgements
+
+ - [CSS](https://www.w3schools.com/w3css/defaulT.asp)
+ 
