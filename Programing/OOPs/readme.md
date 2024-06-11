@@ -5,10 +5,10 @@ This folder consist all my learnings and various projects done on the OOP's conc
 
 ## Table of Contents
 
- - Learning
+ - Learnings
  - Acknowledgements
 
-## Lessons Learned
+## Learnings
 
 In this project, I have learned various topics related to Programming and OOP's concepts. Some of them are:
 
