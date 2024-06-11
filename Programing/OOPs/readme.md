@@ -17,7 +17,8 @@ In this project, I have learned various topics related to Programming and OOP's 
 - Inheritance
 - Encapsulation
 - Polymorphism
-
+- Multithreading
+  
 ## Acknowledgements
 
  - [OOP's Concepts](https://www.youtube.com/playlist?list=PLIfcYFqzDXHn9pCIgliDCujW8UXNOkNdE)
