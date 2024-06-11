@@ -6,14 +6,14 @@ This folder consist all my learnings and projects done on the HTML (Structure of
 ## Table of Contents
 
  - Topics
- - Learning
+ - Learnings
  - Acknowledgements
 
 ## Topics
  
  1. [Form](https://github.com/krish3742/TriwebAPI-Learning/blob/main/HTML/Form/readme.md)
 
-## Lessons Learned
+## Learnings
 
 In this project, I have learned various topics related to HTML. Some of them are:
 
