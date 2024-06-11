@@ -6,14 +6,14 @@ This folder consist all my learnings and various projects done on the Programmin
 ## Table of Contents
 
  - Topics
- - Learning
+ - Learnings
  - Acknowledgements
 
 ## Topics
  
  1. [OOP's Concepts](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Programing/OOPs/readme.md)
 
-## Lessons Learned
+## Learnings
 
 In this project, I have learned various topics related to Programming and OOP's concepts. Some of them are:
 
