@@ -16,14 +16,19 @@ This project consist all my learnings and various projects done in Internship at
  
  1. [Programming Concepts](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Programing/readme.md)
     - [OOP's Concepts](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Programing/OOPs/readme.md)
- 2. [HTML](https://github.com/krish3742/TriwebAPI-Learning/blob/main/HTML/Form/readme.md)
+ 2. [HTML](https://github.com/krish3742/TriwebAPI-Learning/blob/main/HTML/readme.md)
+    - [Form](https://github.com/krish3742/TriwebAPI-Learning/blob/main/HTML/Form/readme.md)
  3. [CSS](https://github.com/krish3742/TriwebAPI-Learning/blob/main/CSS/readme.md)
+    - [Form](https://github.com/krish3742/TriwebAPI-Learning/blob/main/CSS/Form/readme.md)
+    - [Time-Table](https://github.com/krish3742/TriwebAPI-Learning/blob/main/CSS/Time-Table/readme.md)
  4. [JavaScript](https://github.com/krish3742/TriwebAPI-Learning/blob/main/JavaScript/readme.md)
  5. [ES6](https://github.com/krish3742/TriwebAPI-Learning/blob/main/ES6/readme.md)
  6. [ES2020](https://github.com/krish3742/TriwebAPI-Learning/blob/main/ES2020/readme.md)
  7. [MySQL](https://github.com/krish3742/TriwebAPI-Learning/blob/main/MySQL/readme.md)
  8. [MongoDB](https://github.com/krish3742/TriwebAPI-Learning/blob/main/MongoDB/readme.md)
  9. [Projects](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/readme.md)
+    - [Basic JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicJSProject/readme.md)
+    - [HTML CSS JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/HTML_CSS_JS_Project/readme.md)
 
 ## Lessons Learned
 
