@@ -8,7 +8,6 @@ This folder consist all my learnings and various projects done on the Programmin
  - Topics
  - Learning
  - Acknowledgements
- - Authors
 
 ## Topics
  
