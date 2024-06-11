@@ -1,25 +1,51 @@
 ![Logo](/TriwebAPI.jpg)
 
-# Project Title
+# TriwebAPI Internship
+This project consist all my learnings and various projects done in Internship at TriwebAPI.
 
-A brief description of what this project does and who it's for
+[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/krish3742/TriwebAPI-Learning/) [![GitHub Issues](https://img.shields.io/github/issues/krish3742/TriwebAPI-Learning.svg)](https://github.com/krish3742/TriwebAPI-Learning/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/krish3742/TriwebAPI-Learning.svg)](https://github.com/krish3742/TriwebAPI-Learning/pulls) [![CCO License](https://img.shields.io/badge/license-CCO-yellow.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+## Table of Contents
 
+ - Topics
+ - Learning
+ - Acknowledgements
+ - Authors
 
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
+## Topics
+ 
+ 1. Programming Concepts
+    - OOP's Concepts
+ 2. HTML
+ 3. CSS
+ 4. JavaScript
+ 5. ES6
+ 6. ES2020
+ 7. MySQL
+ 8. MongoDB
+ 9. Projects
 
 ## Lessons Learned
 
-What did you learn while building this project? What challenges did you face and how did you overcome them?
+In this project, I have learned various topics required to be MERN stack developer. Some of them are:
+
+- FrontEnd (HTML, CSS, JavaScript)
+- Database (MySQL, MongoDB)
+
+## Acknowledgements
+
+A very thanks to the TriwebAPI team for giving me this opportunity.
+ - [Git and GitHub](https://www.youtube.com/playlist?list=PLIfcYFqzDXHnvnUUPqlp9GqzzgCuYlBsK)
+ - [HTML](https://www.w3schools.com/html/)
+ - [CSS](https://www.w3schools.com/w3css/defaulT.asp)
+ - [JavaScript](https://www.youtube.com/playlist?list=PLIfcYFqzDXHlQrXp52rDY3VSTPNaOEBqT)
+ - [ES6](https://www.youtube.com/playlist?list=PLIfcYFqzDXHnC1mtQBKYeGhXOYzh5vqD9)
+ - [ES2020](https://youtube.com/playlist?list=PLIfcYFqzDXHmTrbi52rwEXyBt8X89MBih&si=oOKhec-uZ9o4p4-5)
+ - [MySQL](https://www.youtube.com/playlist?list=PLIfcYFqzDXHkx3IvtBbsSwmXNljU5kdeM)
+ - [MongoDB](https://www.youtube.com/playlist?list=PLIfcYFqzDXHkSPsm1DfMuA0TEgpycA2e1)
 
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [Kshitij Agrawal](https://www.github.com/krish3742)
 
