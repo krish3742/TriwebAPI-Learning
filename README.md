@@ -8,7 +8,7 @@ This project consist all my learnings and various projects done in Internship at
 ## Table of Contents
 
  - Topics
- - Learning
+ - Learnings
  - Acknowledgements
  - Authors
 
@@ -30,7 +30,7 @@ This project consist all my learnings and various projects done in Internship at
     - [Basic JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicJSProject/readme.md)
     - [HTML CSS JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/HTML_CSS_JS_Project/readme.md)
 
-## Lessons Learned
+## Learnings
 
 In this project, I have learned various topics required to be MERN stack developer. Some of them are:
 
