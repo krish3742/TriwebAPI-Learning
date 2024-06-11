@@ -14,16 +14,16 @@ This project consist all my learnings and various projects done in Internship at
 
 ## Topics
  
- 1. Programming Concepts
-    - OOP's Concepts
- 2. HTML
- 3. CSS
- 4. JavaScript
- 5. ES6
- 6. ES2020
- 7. MySQL
- 8. MongoDB
- 9. Projects
+ 1. [Programming Concepts](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Programing/readme.md)
+    - [OOP's Concepts](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Programing/OOPs/readme.md)
+ 2. [HTML](https://github.com/krish3742/TriwebAPI-Learning/blob/main/HTML/Form/readme.md)
+ 3. [CSS](https://github.com/krish3742/TriwebAPI-Learning/blob/main/CSS/readme.md)
+ 4. [JavaScript](https://github.com/krish3742/TriwebAPI-Learning/blob/main/JavaScript/readme.md)
+ 5. [ES6](https://github.com/krish3742/TriwebAPI-Learning/blob/main/ES6/readme.md)
+ 6. [ES2020](https://github.com/krish3742/TriwebAPI-Learning/blob/main/ES2020/readme.md)
+ 7. [MySQL](https://github.com/krish3742/TriwebAPI-Learning/blob/main/MySQL/readme.md)
+ 8. [MongoDB](https://github.com/krish3742/TriwebAPI-Learning/blob/main/MongoDB/readme.md)
+ 9. [Projects](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/readme.md)
 
 ## Lessons Learned
 
