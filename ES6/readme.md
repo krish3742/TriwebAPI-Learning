@@ -1,3 +1,3 @@
 # ES6
 
-All the practices done on ES6 are available in this folder.
+All the practices done on JS ES6 are available in this folder.
