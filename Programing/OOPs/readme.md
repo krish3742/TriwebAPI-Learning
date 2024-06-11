@@ -7,7 +7,6 @@ This folder consist all my learnings and various projects done on the OOP's conc
 
  - Learning
  - Acknowledgements
- - Authors
 
 ## Lessons Learned
 
