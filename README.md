@@ -1,4 +1,4 @@
-![Logo](/d:/TriwebAPI.jpg/)
+![Logo](/TriwebAPI.jpg)
 
 # Project Title
 
