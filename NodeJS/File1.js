@@ -4,29 +4,40 @@ const port = 3000;
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send("Hello");
+// app.get('/', (req, res) => {
+//     res.send("Hello");
+// });
+
+//Without routers and controllers
+// app.post("/add", (req, res) => {
+//     res.send(`Result = ${req.body.num1 + req.body.num2}`);
+// });
+
+// app.post("/subtract", (req, res) => {
+//     res.send(`Result = ${req.body.num1 - req.body.num2}`);
+// });
+
+// app.post("/multiply", (req, res) => {
+//     res.send(`Result = ${req.body.num1 * req.body.num2}`);
+// });
+
+// app.post("/division", (req, res) => {
+//     res.send(`Result = ${req.body.num1 / req.body.num2}`);
+// });
+
+// app.post("/remainder", (req, res) => {
+//     res.send(`Result = ${req.body.num1 % req.body.num2}`);
+// });
+
+//app.listen(port);
+
+//With routers and controllers
+const calculatorRouter = require('./routers/calculator');
+
+app.use('/calculator', calculatorRouter);
+
+app.use("/", (req, res) => {
+    res.send("You are going to use calculator");
 });
 
-app.post("/add", (req, res) => {
-    res.send(`Result = ${req.body.num1 + req.body.num2}`);
-});
-
-app.post("/subtract", (req, res) => {
-    res.send(`Result = ${req.body.num1 - req.body.num2}`);
-});
-
-app.post("/multiply", (req, res) => {
-    res.send(`Result = ${req.body.num1 * req.body.num2}`);
-});
-
-app.post("/division", (req, res) => {
-    res.send(`Result = ${req.body.num1 / req.body.num2}`);
-});
-
-app.post("/remainder", (req, res) => {
-    res.send(`Result = ${req.body.num1 % req.body.num2}`);
-});
-
-
-app.listen(port);
+app.listen(port);  
