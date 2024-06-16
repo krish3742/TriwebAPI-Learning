@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 //app.listen(port);
 
 //With routers and controllers
-const calculatorRouter = require('./routers/calculator');
+const calculatorRouter = require('../User/routers/calculator');
 
 app.use('/calculator', calculatorRouter);
 
