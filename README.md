@@ -30,6 +30,11 @@ This project consist all my learnings and various projects done in Internship at
     - [Basic JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicJSProject/readme.md)
     - [HTML CSS JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/HTML_CSS_JS_Project/readme.md)
     - [Basic Node JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicNodeJS/readme.md)
+10. [NodeJS](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/readme.md)
+    - [Calculator](https://github.com/krish3742/TriwebAPI-Learning/new/main/NodeJS/Calculator/readme.md)
+    - [User Registration](https://github.com/krish3742/TriwebAPI-Learning/new/main/NodeJS/User/readme.md)
+    - [User Registration using Sequelize](https://github.com/krish3742/TriwebAPI-Learning/new/main/NodeJS/User_Sequelize/readme.md)
+    - [Programming and OOP's Concepts](https://github.com/krish3742/TriwebAPI-Learning/new/main/NodeJS/Programming_OOPs/readme.md)
 
 ## Learnings
 
