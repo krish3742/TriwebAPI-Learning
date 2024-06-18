@@ -8,7 +8,6 @@ This folder consist my project - User Registration using Node.js, Express.js.
  - Features
  - How to use
  - Acknowledgements
- - Authors
 
 ## Features
 
@@ -40,14 +39,11 @@ It's working is:
 ```
 5. Create the table
 ```bash
-  Create table users(
+  Create table user(
     id integer primary key auto_increment,
     name varchar(20),
-    email varchar(20),
-    password varchar(20),
-    remarks varchar(20),
-    createdAt timestamp default current_timestamp,
-    updatedAt timestamp default current_timestamp
+    age integer,
+    mobile_no varchar(20)
 );
 ```
 6. Run the app.js
