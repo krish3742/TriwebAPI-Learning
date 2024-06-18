@@ -29,6 +29,7 @@ This project consist all my learnings and various projects done in Internship at
  9. [Projects](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/readme.md)
     - [Basic JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicJSProject/readme.md)
     - [HTML CSS JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/HTML_CSS_JS_Project/readme.md)
+    - [Basic Node JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicNodeJS/readme.md)
 
 ## Learnings
 
@@ -36,6 +37,7 @@ In this project, I have learned various topics required to be MERN stack develop
 
 - FrontEnd (HTML, CSS, JavaScript)
 - Database (MySQL, MongoDB)
+- Backend (Node.js, Express.js)
 
 ## Acknowledgements
 

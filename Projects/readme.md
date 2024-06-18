@@ -12,6 +12,7 @@ This folder consist all my projects done in this internship.
  
  1. [Basic JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicJSProject/readme.md)
  2. [HTML CSS JS Project](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/HTML_CSS_JS_Project/readme.md)
+ 3. [Basic Node JS](https://github.com/krish3742/TriwebAPI-Learning/blob/main/Projects/BasicNodeJS/readme.md)
 
 ## Acknowledgements
 
