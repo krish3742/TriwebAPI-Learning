@@ -11,7 +11,7 @@ This folder consist all my learnings and various projects done on the Programmin
 
 ## Topics
  
- 1. [Pattern](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/Programming_OOPs/pattern.js)
+ 1. [Pattern-Recursion](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/Programming_OOPs/pattern.js)
  2. [Break-Continue Statements](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/Programming_OOPs/break_continue.js)
  3. [Encapsulation](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/Programming_OOPs/encapsulation.js)
  4. [Polymorphism](https://github.com/krish3742/TriwebAPI-Learning/blob/main/NodeJS/Programming_OOPs/polymorphism.js)
