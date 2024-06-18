@@ -7,10 +7,10 @@ This project consist all my learnings and various projects done in Internship at
 
 ## Table of Contents
 
- - Topics
- - Learnings
- - Acknowledgements
- - Authors
+ - [Topics](https://github.com/krish3742/TriwebAPI-Learning?tab=readme-ov-file#topics)
+ - [Learnings](https://github.com/krish3742/TriwebAPI-Learning?tab=readme-ov-file#learnings) 
+ - [Acknowledgements](https://github.com/krish3742/TriwebAPI-Learning?tab=readme-ov-file#acknowledgements)
+ - [Authors](https://github.com/krish3742/TriwebAPI-Learning?tab=readme-ov-file#authors)
 
 ## Topics
  
