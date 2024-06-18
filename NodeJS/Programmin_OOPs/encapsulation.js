@@ -19,24 +19,25 @@ class account {
             console.log('Invalid withdraw amount');
         }
     }
-    getbal() {
+    getbalance() {
         console.log(`Current balance: ${this.bal}`);
         return this.bal;
     }
 }
   
 function main() {
+    console.log("Account opened with 100 rupees");
     const acc = new account(100);
-    acc.getbal();
-  
+    acc.getbalance();
+    console.log("Despositing amount Rs 50...");
     acc.deposit(50);
-    acc.getbal();
-  
+    acc.getbalance();
+    console.log("Withdrawing amount Rs 30...");
     acc.withdraw(30);
-    acc.getbal();
-  
+    acc.getbalance();
+    console.log("Withdrawing amount Rs 150...");  
     acc.withdraw(150);
-    acc.getbal();
+    acc.getbalance();
 }
   
 main();
