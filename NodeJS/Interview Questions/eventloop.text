@@ -1,8 +1,29 @@
-Event Loop
-
-1. JavaScript(NodeJS) never blocks the code due to event Loop
-2. Collectiong and processing events
-3. Executing queued sub task
-4. Responsible for executing the code.
-
-Loop queued - Wait synchronously for the message to arrive and once, message arrived it trigger the event.
+1. Diff between JS and Node.JS
+2. Client vs Server
+3. Event Loop
+4. Loop queue
+5. call()
+6. setImmediate()/setTimeout()
+7. process.nextTick()
+8. apply()
+9. bind()
+10. yield
+11. Array vs Map
+12. Callback
+13. Callback Hell
+14. new.target()
+15. Event emitter
+16. libuv
+17. Projection in MongoDb
+18. Promise
+19. Promise.all()
+20. Promise.allSettled()
+21. Promise.any()
+22. Promise.race()
+23. Async - await
+24. Shallow copy
+25. Deep copy
+26. Revealing Module Pattern
+27. Spaghetti code
+28. Exception handling
+29. Rest API
