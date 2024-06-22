@@ -1,0 +1,8 @@
+Event Loop
+
+1. JavaScript(NodeJS) never blocks the code due to event Loop
+2. Collectiong and processing events
+3. Executing queued sub task
+4. Responsible for executing the code.
+
+Loop queued - Wait synchronously for the message to arrive and once, message arrived it trigger the event.
