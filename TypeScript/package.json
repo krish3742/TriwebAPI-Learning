@@ -1,0 +1,21 @@
+{
+  "name": "User_Service",
+  "version": "1.0.0",
+  "description": "Basic typescript program using node.js server",
+  "main": "app.js",
+  "author": "kshitij",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.8",
+    "nodemon": "^3.1.4"
+  },
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "start:dev": "nodemon ./dist/app.js"
+  }
+}
