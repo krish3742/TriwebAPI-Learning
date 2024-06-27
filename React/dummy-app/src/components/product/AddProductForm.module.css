@@ -1,0 +1,35 @@
+.div label {
+    display: block;
+    font-weight: bold;
+}
+
+.div input {
+    width: 98.5%;
+    outline: none;
+}
+
+.div textarea {
+    width: 98.5%;
+    outline: none;
+}
+
+.form {
+    padding: 1rem;
+}
+
+.button {
+    text-align: end;
+}
+
+.button input {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: .2rem;
+}
+
+.button input:hover {
+    cursor: pointer;
+}
