@@ -1,7 +1,7 @@
 import {useRef} from 'react';
 import CustomWrapper from "../layout/CustomWrapper";
 import Style from './AddProductForm.module.css';
-function AddProductForm() {
+function AddProductForm(props) {
     const pname_ref = useRef();
     const img_ref = useRef();
     const price_ref = useRef();
@@ -18,7 +18,7 @@ function AddProductForm() {
             price,
             description
         }
-        console.log(productList);
+        props.sendProduct(productList);
     }
     return <CustomWrapper>
         <form className={Style.form} onSubmit={submitHandler}>

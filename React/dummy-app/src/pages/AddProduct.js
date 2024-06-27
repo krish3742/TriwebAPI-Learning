@@ -1,6 +1,9 @@
 import AddProductForm from "../components/product/AddProductForm";
 function AddProduct() {
-    return <AddProductForm />
+    function sendProduct(newProduct) {
+        console.log(newProduct)
+    }
+    return <AddProductForm sendProduct={sendProduct}/>
 }
 
 export default AddProduct;

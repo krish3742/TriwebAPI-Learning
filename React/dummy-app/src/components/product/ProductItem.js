@@ -2,6 +2,7 @@ import CustomWrapper from "../layout/CustomWrapper";
 import Style from './ProductItem.module.css';
 function ProductItem(props) {
     return <div key={props.item.id} className={Style.text}>
+        {/* {console.log(props.item)} */}
         <CustomWrapper>
             <div>
                 <img src={props.item.img} alt="No-image" />
