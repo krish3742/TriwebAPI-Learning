@@ -1,0 +1,25 @@
+.nav{
+    background-color: blue;
+    display: inline-flex;
+    padding-right: 2rem;
+    margin-top: 2rem;
+    margin-left: 32%;
+}
+
+.ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.li {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.626);
+}
+
+.link:hover {
+    color: white;
+}
