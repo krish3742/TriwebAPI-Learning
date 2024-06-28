@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import Product from './pages/Product';
 import AddProduct from './pages/AddProduct';
 import OuterLayout from './components/layout/OuterLayout';
+import FavItem from './pages/FavItem';
 import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/owner' element={<Owner owner={owner} newOwner={newOwner}/>}></Route>
         <Route path='/product' element={<Product />}></Route>
         <Route path='/product/add' element={<AddProduct />}></Route>
+        <Route path='/product/favourite' element={<FavItem />}></Route>
       </Routes>
     </OuterLayout>
   );
