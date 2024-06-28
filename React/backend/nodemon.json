@@ -1,0 +1,6 @@
+{
+    "env": {
+        "connectionString": "mongodb+srv://akshitij70:krishagrawal@samplecluster.dbyvesv.mongodb.net/?retryWrites=true&w=majority&appName=SampleCluster",
+        "PORT": 3002
+    }
+}
