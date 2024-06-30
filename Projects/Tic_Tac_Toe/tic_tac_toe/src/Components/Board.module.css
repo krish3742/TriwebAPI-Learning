@@ -1,0 +1,6 @@
+.div {
+    width: 17rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

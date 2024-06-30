@@ -1,0 +1,11 @@
+.button {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    color: brown;
+    background-color: rgb(20, 239, 111)
+}
