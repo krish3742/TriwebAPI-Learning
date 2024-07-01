@@ -1,0 +1,17 @@
+{
+  "name": "backend-todo-app",
+  "version": "1.0.0",
+  "description": "Backend of the TO DO App to store the data in the database",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4"
+  }
+}
