@@ -1,14 +1,18 @@
+import { useState } from 'react';
 import Style from './ShowItem.module.css';
 import { MdDelete } from "react-icons/md";
-import { FaRegCheckCircle } from "react-icons/fa";
 function ShowItem(props) {
+    const [flag, setFlag] = useState(false);
+    function checkboxClick() {
+        setFlag(!flag);
+    }
     return (
         <div key={props._id} className={Style.div}>
-            <div>
-                <FaRegCheckCircle className={Style.check}/>
-            </div>
-            <div className={Style.text}>
-                {props.item.value}
+            <div className={Style.checkdiv}>
+                <input type='checkbox' className={Style.check} onClick={checkboxClick}></input>
+                <div className={flag ? Style.checked : Style.unchecked}>
+                    {props.item.value}
+                </div>
             </div>
             <div className={Style.delete}>
                 <MdDelete onClick={() => props.deleteClick(props.item._id)} />

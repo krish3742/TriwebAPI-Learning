@@ -9,6 +9,7 @@ function AddSection(props) {
             value
         }
         props.addClick(data);
+        value_ref.current.value = null;
     }
     return (
         <form className={Style.form}>

@@ -15,8 +15,11 @@ function HomePage() {
             .catch((error) => console.log(error));
     }, [flag])
     function deleteClick(_id) {
+        let payload = {
+            _id
+        };
         axios
-            .delete("http://localhost:3002/list/delete", {_id})
+            .delete("http://localhost:3002/list/delete", {data: payload})
             .then((res) => {
                 setFlag(!flag);
             })
@@ -34,7 +37,7 @@ function HomePage() {
         <>
             <Heading />
             <AddSection addClick={(data) => addClick(data)}/>
-            <ShowSection list={list} deleteClick={(_id) => deleteClick(_id)}/>
+            <ShowSection list={list} deleteClick={(_id) => deleteClick(_id)} />
         </>
     )
 }
