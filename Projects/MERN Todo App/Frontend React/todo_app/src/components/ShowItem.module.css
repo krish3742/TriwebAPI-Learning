@@ -1,0 +1,37 @@
+.div {
+    width: 22rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.delete {
+    font-size: 1.5rem;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+.check{
+    color: black;
+    font-size: 1.2rem;
+    /* margin-right: 0.5rem; */
+}
+
+.check:hover {
+    cursor: pointer;
+}
+
+.text {
+    /* position: relative; */
+    justify-items: start;
+}
