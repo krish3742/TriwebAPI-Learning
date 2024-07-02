@@ -13,7 +13,7 @@ function AddSection(props) {
     }
     return (
         <form className={Style.form}>
-            <input type="text" id="value" ref={value_ref} className={Style.input} placeholder='Enter your text...'></input>
+            <input type="text" ref={value_ref} className={Style.input} placeholder='Enter your text...'></input>
             <button type="submit" className={Style.button} onClick={handleClick}>Add</button>
         </form>
     )

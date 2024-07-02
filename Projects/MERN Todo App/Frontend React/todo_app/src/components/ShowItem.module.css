@@ -16,6 +16,7 @@
 
 .delete {
     font-size: 1.5rem;
+    /* margin-top: .3rem; */
 }
 
 .delete:hover {
@@ -27,7 +28,7 @@
     width: 1rem;
     margin-right: 0.5rem;
     clip-path: circle(44% at 50% 50%);
-    margin-top: .3rem;
+    margin-top: .4rem;
 }
 
 .check:hover {
@@ -45,4 +46,13 @@
 
 .checkdiv {
     display: flex;
+}
+
+.edit {
+    font-size: 1.05rem;
+    margin-right: .5rem;
+}
+
+.edit:hover {
+    cursor: pointer;
 }
