@@ -6,6 +6,13 @@ import authRouter from "./routes/auth";
 const app = express();
 const connectionString = process.env.CONNECTION_STRING || "";
 
+declare global {
+    namespace Express {
+        interface Request {
+            userId: String;
+        }
+    }
+}
 app.use(express.json());
 app.get("/", (req, res) => {
     res.send("You are in server");

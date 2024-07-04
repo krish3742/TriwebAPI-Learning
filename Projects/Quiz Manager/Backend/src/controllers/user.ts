@@ -10,6 +10,9 @@ const fetchUser = async (req: Request, res: Response) => {
     let resp: returnResponse;
     try {
         const userId = req.params.userId;
+        if(req.userId != userId) {
+            throw new Error("You are not authorized!");
+        }
         if(userId.length != 24) {
             resp = {
                 status: "error",
@@ -50,6 +53,9 @@ const updateUser = async (req: Request, res: Response) => {
     let resp: returnResponse;
     try {
         const userId = req.body._id;
+        if(req.userId != userId) {
+            throw new Error("You are not authorized!");
+        }
         const result = await User.findById(userId, {name: 1, email: 1});
         if(!result) {
             resp = {
