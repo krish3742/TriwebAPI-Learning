@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-
 import userRouter from "./routes/user";
+import authRouter from "./routes/auth";
 
 const app = express();
 const connectionString = process.env.CONNECTION_STRING || "";
@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
     res.send("You are in server");
 });
 app.use("/user", userRouter);
+app.use('/auth', authRouter);
 mongoose
     .connect(connectionString)
     .then((response) => {
