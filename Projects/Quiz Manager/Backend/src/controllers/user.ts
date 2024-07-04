@@ -124,11 +124,11 @@ const loginUser = async (req: Request, res: Response) => {
             const passwordFromDb = responseFromDb.password;
             const passwordCheck = bcrypt.compareSync(passwordFromUser, passwordFromDb);
             if(passwordCheck) {
-                // const token = jwt.sign({userId: responseFromDb._id}, "secretKey", {expiresIn: "1h"});
+                const token = jwt.sign({userId: responseFromDb._id}, "secretKey", {expiresIn: "1h"});
                 resp = {
                     status: "success",
                     message: "Logged In!",
-                    data: {}
+                    data: {token}
                 }
                 res.send(resp);
             } else {
