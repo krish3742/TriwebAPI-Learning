@@ -13,5 +13,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 mongoose
     .connect(connectionString)
-    .then((response) => app.listen(process.env.PORT))
+    .then((response) => {
+        console.log("Server Connected!");
+        app.listen(process.env.PORT);
+    })
     .catch((error) => console.log(error));
