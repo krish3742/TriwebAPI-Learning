@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import User from '../models/user';
+import ProjectError from '../helpers/projectError';
 interface returnResponse{
     status: "success" | "error",
     message: String,
@@ -11,16 +12,15 @@ const fetchUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const userId = req.params.userId;
         if(req.userId != userId) {
-            throw new Error("You are not authorized!");
+            const err = new ProjectError("You are not authorized!");
+            err.statusCode = 401;
+            throw err;
         }
         const result = await User.findById(userId, {name: 1, email: 1});
         if(!result) {
-            resp = {
-                status: "error",
-                message: "No user found!",
-                data: {}
-            };
-            res.send(resp);
+            const err = new ProjectError("User not found!");
+            err.statusCode = 401;
+            throw err;
         } else {
             resp = {
                 status: "success",
@@ -39,16 +39,15 @@ const updateUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const userId = req.body._id;
         if(req.userId != userId) {
-            throw new Error("You are not authorized!");
+            const err = new ProjectError("You are not authorized!");
+            err.statusCode = 401;
+            throw err;
         }
         const result = await User.findById(userId, {name: 1, email: 1});
         if(!result) {
-            resp = {
-                status: "error",
-                message: "No user found!",
-                data: {}
-            };
-            res.send(resp);
+            const err = new ProjectError("User not found!");
+            err.statusCode = 401;
+            throw err;
         } else {
             if(result.name != req.body.name) {
                 result.name = req.body.name;
@@ -60,12 +59,9 @@ const updateUser = async (req: Request, res: Response, next: NextFunction) => {
                 };
                 res.send(resp);
             } else {
-                resp = {
-                    status: "error",
-                    message: "User data is same!",
-                    data: {}
-                };
-                res.send(resp);
+                const err = new ProjectError("User data is same!");
+                err.statusCode = 409;
+                throw err;
             }
         }  
     } catch (error) {

@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import User from '../models/user';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import ProjectError from "../helpers/projectError";
 interface returnResponse{
     status: "success" | "error",
     message: String,
@@ -34,12 +35,9 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
         const passwordFromUser = req.body.password;
         const responseFromDb = await User.findOne({email: emailFromUser});
         if(!responseFromDb) {
-            resp = {
-                status: "error",
-                message: "Incorrect email or password!",
-                data: {}
-            }
-            res.status(401).send(resp);
+            let err = new ProjectError("Credential mismatch!");
+            err.statusCode = 401;
+            throw err;
         } else {
             const passwordFromDb = responseFromDb.password;
             const passwordCheck = bcrypt.compareSync(passwordFromUser, passwordFromDb);
@@ -52,12 +50,9 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
                 }
                 res.send(resp);
             } else {
-                resp = {
-                    status: "error",
-                    message: "Incorrect email or password!",
-                    data: {}
-                }
-                res.status(401).send(resp);
+                let err = new ProjectError("Credential mismatch!");
+                err.statusCode = 401;
+                throw err;
             }
         }
     } catch(error) {
