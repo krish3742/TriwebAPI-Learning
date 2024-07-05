@@ -13,30 +13,21 @@ const fetchUser = async (req: Request, res: Response, next: NextFunction) => {
         if(req.userId != userId) {
             throw new Error("You are not authorized!");
         }
-        if(userId.length != 24) {
+        const result = await User.findById(userId, {name: 1, email: 1});
+        if(!result) {
             resp = {
                 status: "error",
                 message: "No user found!",
                 data: {}
-            }
+            };
             res.send(resp);
         } else {
-            const result = await User.findById(userId, {name: 1, email: 1});
-            if(!result) {
-                resp = {
-                    status: "error",
-                    message: "No user found!",
-                    data: {}
-                };
-                res.send(resp);
-            } else {
-                resp = {
-                    status: "success",
-                    message: "User fetched!",
-                    data: result
-                };
-                res.send(resp);
-            }
+            resp = {
+                status: "success",
+                message: "User fetched!",
+                data: result
+            };
+            res.send(resp);
         }
     } catch (error) {
         next(error);
