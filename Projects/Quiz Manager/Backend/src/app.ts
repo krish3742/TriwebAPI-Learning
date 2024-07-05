@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import { Request, Response, NextFunction } from 'express';
 import userRouter from "./routes/user";
 import authRouter from "./routes/auth";
 
@@ -12,13 +13,17 @@ declare global {
             userId: String;
         }
     }
-}
+};
 app.use(express.json());
 app.get("/", (req, res) => {
     res.send("You are in server");
 });
 app.use("/user", userRouter);
 app.use('/auth', authRouter);
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.log(err);
+    res.send("Error! Please try after sometime!");
+});
 mongoose
     .connect(connectionString)
     .then((response) => {

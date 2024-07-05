@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import User from '../models/user';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -8,7 +8,7 @@ interface returnResponse{
     data: {}
 }
 
-const registerUser = async (req: Request, res: Response) => {
+const registerUser = async (req: Request, res: Response, next: NextFunction) => {
     let resp: returnResponse;
     try {
         const name = req.body.name;
@@ -23,17 +23,11 @@ const registerUser = async (req: Request, res: Response) => {
         }
         res.send(resp);
     } catch (error) {
-        resp = {
-            status: "error",
-            message: "Something went wrong!",
-            data: {}
-        }
-        console.log(error);
-        res.status(500).send(resp);
+        next(error);
     }
 };
 
-const loginUser = async (req: Request, res: Response) => {
+const loginUser = async (req: Request, res: Response, next: NextFunction) => {
     let resp: returnResponse;
     try{
         const emailFromUser = req.body.email;
@@ -67,13 +61,7 @@ const loginUser = async (req: Request, res: Response) => {
             }
         }
     } catch(error) {
-        resp = {
-            status: "error",
-            message: "Something went wrong!",
-            data: {}
-        }
-        console.log(error);
-        res.status(500).send(resp);
+        next(error);
     }
 };
 
