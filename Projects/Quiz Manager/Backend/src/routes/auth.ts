@@ -14,7 +14,7 @@ router.post("/", [
         .isEmail()
         .withMessage("Enter a valid email!")
         .normalizeEmail()
-        .custom(async (email) => {
+        .custom(async (email:String) => {
             return await isEmailExists(email)
                 .then((status) => {
                     if(status) {
