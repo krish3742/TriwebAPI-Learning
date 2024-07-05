@@ -4,7 +4,7 @@ import ProjectError from '../helpers/projectError';
 interface returnResponse{
     status: "success" | "error",
     message: String,
-    data: {}
+    data: {} | []
 }
 
 const fetchUser = async (req: Request, res: Response, next: NextFunction) => {

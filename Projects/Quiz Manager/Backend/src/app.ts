@@ -22,7 +22,7 @@ declare global {
 interface returnResponse{
     status: "success" | "error",
     message: String,
-    data: {}
+    data: {} | []
 };
 
 app.use(express.json());
@@ -34,7 +34,7 @@ app.use('/auth', authRouter);
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
     let message:string;
     let statusCode:number;
-    let data:object = {};
+    let data:object | [] = {};
     if(!!err.statusCode && err.statusCode < 500) {
         statusCode = err.statusCode;
         message = err.message;
@@ -50,7 +50,7 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         message,
         data
     }
-    console.log(err);
+    console.log(statusCode, err.message);
     res.status(statusCode).send(resp);
 });
 mongoose
