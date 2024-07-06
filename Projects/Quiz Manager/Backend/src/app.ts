@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { Request, Response, NextFunction } from 'express';
 import userRouter from "./routes/user";
 import authRouter from "./routes/auth";
+import quizRouter from "./routes/quiz"
 import ProjectError from "./helpers/projectError";
 
 const app = express();
@@ -12,9 +13,6 @@ declare global {
     namespace Express {
         interface Request {
             userId: String;
-        }
-        interface Error {
-            statusCode: Number;
         }
     }
 };
@@ -31,6 +29,7 @@ app.get("/", (req, res) => {
 });
 app.use("/user", userRouter);
 app.use('/auth', authRouter);
+app.use('/quiz', quizRouter);
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
     let message:string;
     let statusCode:number;
@@ -50,7 +49,7 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         message,
         data
     }
-    console.log(statusCode, err.message);
+    console.log(statusCode, err);
     res.status(statusCode).send(resp);
 });
 mongoose

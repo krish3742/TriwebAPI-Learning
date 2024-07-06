@@ -33,7 +33,7 @@ router.post("/", [
         .trim()
         .custom((confirm_password, {req}) => {
             if(confirm_password != req.body.password) {
-                return Promise.reject("Password mismatch!");
+                return Promise.reject("Confirm password mismatch!");
             }
             return true;
         })
