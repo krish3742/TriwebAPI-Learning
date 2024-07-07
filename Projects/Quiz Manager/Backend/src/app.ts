@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 import { Request, Response, NextFunction } from 'express';
 import userRouter from "./routes/user";
 import authRouter from "./routes/auth";
-import quizRouter from "./routes/quiz"
+import quizRouter from "./routes/quiz";
+import examRouter from "./routes/exam";
+import reportRouter from "./routes/report";
 import ProjectError from "./helpers/projectError";
 
 const app = express();
@@ -30,6 +32,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 app.use('/auth', authRouter);
 app.use('/quiz', quizRouter);
+app.use('/exam', examRouter);
+app.use('/report', reportRouter);
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
     let message:string;
     let statusCode:number;
@@ -49,6 +53,7 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         message,
         data
     }
+    console.log(err.message);
     console.log(statusCode, err);
     res.status(statusCode).send(resp);
 });

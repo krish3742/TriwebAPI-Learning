@@ -6,7 +6,7 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
     try {
         const authHeader = req.get('Authorization');
         if(!authHeader) {
-            const err = new ProjectError("You are not authorized!");
+            const err = new ProjectError("Not authenticated!");
             err.statusCode = 401;
             throw err;
         }
@@ -18,7 +18,7 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         };
         decodedToken = <any>jwt.verify(token, "secretKey");
         if(!decodedToken) {
-            const err = new ProjectError("You are not authorized!");
+            const err = new ProjectError("Not authenticated!");
             err.statusCode = 401;
             throw err;
         }
