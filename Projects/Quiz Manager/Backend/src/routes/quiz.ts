@@ -2,9 +2,10 @@ import express from 'express';
 import { body } from 'express-validator';
 import { createQuiz, fetchQuiz, updateQuiz, deleteQuiz, publishQuiz, isQuizNameExists } from '../controllers/quiz';
 import { isAuthenticated } from '../middlewares/isAuthenticated';
+import { isDeactivated } from '../middlewares/isDeactivated';
 const router = express.Router();
 //POST /quiz
-router.post('/', isAuthenticated, [
+router.post('/', isAuthenticated, isDeactivated, [
     body('name')
         .trim()
         .not()
@@ -39,10 +40,10 @@ router.post('/', isAuthenticated, [
 ], createQuiz);
 
 //GET /quiz/:quizId?
-router.get("/:quizId?", isAuthenticated, fetchQuiz);
+router.get("/:quizId?", isAuthenticated, isDeactivated, fetchQuiz);
 
 //PUT /quiz
-router.put('/', isAuthenticated, [
+router.put('/', isAuthenticated, isDeactivated, [
     body('name')
         .trim()
         .not()
@@ -77,9 +78,9 @@ router.put('/', isAuthenticated, [
 ], updateQuiz);
 
 //DELETE /quiz/:quizId
-router.delete('/:quizId', isAuthenticated, deleteQuiz);
+router.delete('/:quizId', isAuthenticated, isDeactivated, deleteQuiz);
 
 //PATCH /quiz/publish
-router.patch("/publish", isAuthenticated, publishQuiz);
+router.patch("/publish", isAuthenticated, isDeactivated, publishQuiz);
 
 export default router;
