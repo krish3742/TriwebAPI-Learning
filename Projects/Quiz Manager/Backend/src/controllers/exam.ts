@@ -2,12 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import Quiz from "../models/quiz";
 import Report from "../models/report";
 import ProjectError from "../helpers/projectError";
-
-interface returnResponse{
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-};
+import { returnResponse } from "../utils/interfaces";
 
 const startExam = async (req: Request, res: Response, next: NextFunction) => {
     let resp: returnResponse;

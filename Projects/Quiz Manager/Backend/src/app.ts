@@ -7,6 +7,7 @@ import quizRouter from "./routes/quiz";
 import examRouter from "./routes/exam";
 import reportRouter from "./routes/report";
 import ProjectError from "./helpers/projectError";
+import { returnResponse } from "./utils/interfaces";
 
 const app = express();
 const connectionString = process.env.CONNECTION_STRING || "";
@@ -17,12 +18,6 @@ declare global {
             userId: String;
         }
     }
-};
-
-interface returnResponse{
-    status: "success" | "error",
-    message: String,
-    data: {} | []
 };
 
 app.use(express.json());
@@ -68,7 +63,6 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         data
     }
     console.log(err.message);
-    console.log(statusCode, err);
     res.status(statusCode).send(resp);
 });
 mongoose
