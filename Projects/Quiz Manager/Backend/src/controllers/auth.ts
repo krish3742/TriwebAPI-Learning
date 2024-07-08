@@ -43,7 +43,7 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
         const passwordFromUser = req.body.password;
         const responseFromDb = await User.findOne({email: emailFromUser});
         if(!responseFromDb) {
-            let err = new ProjectError("Credential mismatch!");
+            let err = new ProjectError("Credentials mismatch!");
             err.statusCode = 401;
             throw err;
         } else {
@@ -58,7 +58,7 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
                 }
                 res.send(resp);
             } else {
-                let err = new ProjectError("Credential mismatch!");
+                let err = new ProjectError("Credentials mismatch!");
                 err.statusCode = 401;
                 throw err;
             }

@@ -13,23 +13,26 @@ const startExam = async (req: Request, res: Response, next: NextFunction) => {
     let resp: returnResponse;
     try {
         const quizId = req.params.quizId;
-        const quiz = await Quiz.findById(quizId, {name: 1, questionsList: 1, isPublished: 1});
-        if(!quiz) {
-            const err = new ProjectError("Quiz not found!");
-            err.statusCode = 404;
-            throw err;
-        } else if(!quiz.isPublished) {
-            const err = new ProjectError("Quiz is not published!");
-            err.statusCode = 404;
-            throw err;
+        let quiz ;
+        if(!quizId) {
+            quiz = await Quiz.find({isPublished: true}, {name: 1, questionsList: 1});
+            if(quiz.length == 0) {
+                const err = new ProjectError("No quiz available!");
+                err.statusCode = 404;
+                throw err;
+            }
+        } else {
+            quiz = await Quiz.findOne({_id: quizId, isPublished: true}, {name: 1, questionsList: 1});
+            if(!quiz) {
+                const err = new ProjectError("Quiz not found or either published!");
+                err.statusCode = 404;
+                throw err;
+            }
         }
         resp = {
             status: "success",
             message: "Quiz fetched!",
-            data: {
-                name: quiz.name,
-                questionsList: quiz.questionsList
-            }
+            data: quiz
         }
         res.send(resp);
     } catch (error) {

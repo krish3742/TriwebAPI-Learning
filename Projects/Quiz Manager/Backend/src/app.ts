@@ -35,15 +35,29 @@ app.use('/quiz', quizRouter);
 app.use('/exam', examRouter);
 app.use('/report', reportRouter);
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
-    let message:string;
+    let message:string = "";
     let statusCode:number;
     let data:object | [] = {};
+    let serverMessage:string;
     if(!!err.statusCode && err.statusCode < 500) {
         statusCode = err.statusCode;
         message = err.message;
     } else {
-        message = "Error! Please try after sometime!";
-        statusCode = 500;
+        serverMessage = err.message;
+        if(serverMessage.includes("jwt expired")) {
+            message = "Not authenticated!";
+            statusCode = 401;
+        } else if (serverMessage.includes("Cast to ObjectId failed")) {
+            if(serverMessage.includes("quiz")) {
+                message = "Quiz not found!";
+            } else if(serverMessage.includes("report")) {
+                message = "Report not found!";
+            }
+            statusCode = 404;
+        } else {
+            message = "Error! Please try after sometime!";
+            statusCode = 500;
+        }
     }
     if(!!err.data) {
         data = err.data;

@@ -10,7 +10,7 @@ router.post('/', isAuthenticated, [
         .not()
         .isEmpty()
         .isLength({min: 10})
-        .withMessage("Name must be 10 character long!")
+        .withMessage("Name must be 10 characters long!")
         .custom(async (name: String) => {
             return await isQuizNameExists(name)
                 .then((status) => {
@@ -37,8 +37,10 @@ router.post('/', isAuthenticated, [
             return true;
         })
 ], createQuiz);
-//GET /quiz/:quizId
-router.get("/:quizId", isAuthenticated, fetchQuiz);
+
+//GET /quiz/:quizId?
+router.get("/:quizId?", isAuthenticated, fetchQuiz);
+
 //PUT /quiz
 router.put('/', isAuthenticated, [
     body('name')
@@ -73,8 +75,10 @@ router.put('/', isAuthenticated, [
             return true;
         })
 ], updateQuiz);
+
 //DELETE /quiz/:quizId
 router.delete('/:quizId', isAuthenticated, deleteQuiz);
+
 //PATCH /quiz/publish
 router.patch("/publish", isAuthenticated, publishQuiz);
 

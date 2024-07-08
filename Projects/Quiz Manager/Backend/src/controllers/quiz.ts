@@ -41,24 +41,27 @@ const fetchQuiz = async (req: Request, res: Response, next: NextFunction) => {
     let resp: returnResponse;
     try {
         const quizId = req.params.quizId;
-        const quiz = await Quiz.findById(quizId, {name: 1, questionsList: 1, answers: 1, createdBy: 1});
-        if(!quiz) {
-            const err = new ProjectError("Quiz not found!");
-            err.statusCode = 404;
-            throw err;
-        } else if(req.userId != quiz.createdBy) {
-            const err = new ProjectError("You are not authorized!");
-            err.statusCode = 403;
-            throw err;
+        const userId = req.userId;
+        let quiz;
+        if(!quizId) {
+            quiz = await Quiz.find({createdBy: userId}, {name: 1, questionsList: 1, answers: 1});
+            if(quiz.length == 0) {
+                const err = new ProjectError("No quiz found!");
+                err.statusCode = 404;
+                throw err;
+            }
+        } else {
+            quiz = await Quiz.findOne({_id: quizId, createdBy: userId}, {name: 1, questionsList: 1, answers: 1});
+            if(!quiz) {
+                const err = new ProjectError("Quiz not found!");
+                err.statusCode = 404;
+                throw err;
+            }
         }
         resp = {
             status: "success",
             message: "Quiz fetched!",
-            data: {
-                name: quiz.name,
-                questionsList: quiz.questionsList,
-                answers: quiz.answers
-            }
+            data: quiz
         }
         res.send(resp);  
     } catch (error) {
@@ -148,6 +151,10 @@ const publishQuiz = async (req: Request, res: Response, next: NextFunction) => {
         } else if(req.userId != quiz.createdBy) {
             const err = new ProjectError("You are not authorized!");
             err.statusCode = 403;
+            throw err;
+        } else if(quiz.isPublished) {
+            const err = new ProjectError("Quiz already published!");
+            err.statusCode = 409;
             throw err;
         }
         quiz.isPublished = true;
