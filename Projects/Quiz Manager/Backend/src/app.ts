@@ -6,6 +6,7 @@ import authRouter from "./routes/auth";
 import quizRouter from "./routes/quiz";
 import examRouter from "./routes/exam";
 import reportRouter from "./routes/report";
+import accountRouter from './routes/account';
 import ProjectError from "./helpers/projectError";
 import { returnResponse } from "./utils/interfaces";
 
@@ -29,6 +30,7 @@ app.use('/auth', authRouter);
 app.use('/quiz', quizRouter);
 app.use('/exam', examRouter);
 app.use('/report', reportRouter);
+app.use('/account', accountRouter);
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
     let message:string = "";
     let statusCode:number;
