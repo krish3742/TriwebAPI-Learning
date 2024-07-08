@@ -62,7 +62,7 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         message,
         data
     }
-    console.log(err.message);
+    console.log(err);
     res.status(statusCode).send(resp);
 });
 mongoose
