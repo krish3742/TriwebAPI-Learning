@@ -14,6 +14,16 @@ const userSchema = new schema({
     password: {
         type: String,
         required: true
+    },
+    activate: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
+    deactivate: {
+        type: Boolean,
+        required: true,
+        default: false
     }
 }, {
     timestamps: true
