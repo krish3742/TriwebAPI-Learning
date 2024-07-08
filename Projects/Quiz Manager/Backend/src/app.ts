@@ -41,7 +41,7 @@ app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => 
         message = err.message;
     } else {
         serverMessage = err.message;
-        if(serverMessage.includes("jwt expired")) {
+        if(serverMessage.includes("jwt expired") || serverMessage.includes("jwt malformed")) {
             message = "Not authenticated!";
             statusCode = 401;
         } else if (serverMessage.includes("Cast to ObjectId failed")) {
