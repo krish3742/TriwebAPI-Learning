@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import ProjectError from "../helpers/projectError";
 import { validationResult } from "express-validator";
 import { returnResponse } from "../utils/interfaces";
+import { emailer } from "../helpers/emailer";
 
 const registerUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
@@ -47,6 +48,12 @@ const loginUser: RequestHandler = async (req, res, next) => {
             const passwordCheck = bcrypt.compareSync(passwordFromUser, passwordFromDb);
             if(passwordCheck) {
                 const token = jwt.sign({userId: responseFromDb._id}, "secretKey", {expiresIn: "1h"});
+                if(!responseFromDb.activate) {
+                    emailer(responseFromDb.email);
+                    responseFromDb.activate = true;
+                    responseFromDb.deactivate = false;
+                    await responseFromDb.save();
+                }
                 resp = {
                     status: "success",
                     message: "Logged In!",
