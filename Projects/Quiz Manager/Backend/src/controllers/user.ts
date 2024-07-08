@@ -1,9 +1,9 @@
-import { NextFunction, Request, Response } from "express";
+import { RequestHandler } from "express";
 import User from '../models/user';
 import ProjectError from '../helpers/projectError';
 import { returnResponse } from "../utils/interfaces";
 
-const fetchUser = async (req: Request, res: Response, next: NextFunction) => {
+const fetchUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const userId = req.params.userId;
@@ -30,7 +30,7 @@ const fetchUser = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
-const updateUser = async (req: Request, res: Response, next: NextFunction) => {
+const updateUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const userId = req.body._id;

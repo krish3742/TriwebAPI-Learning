@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { RequestHandler } from "express";
 import User from '../models/user';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -6,7 +6,7 @@ import ProjectError from "../helpers/projectError";
 import { validationResult } from "express-validator";
 import { returnResponse } from "../utils/interfaces";
 
-const registerUser = async (req: Request, res: Response, next: NextFunction) => {
+const registerUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const validationError = validationResult(req);
@@ -32,7 +32,7 @@ const registerUser = async (req: Request, res: Response, next: NextFunction) => 
     }
 };
 
-const loginUser = async (req: Request, res: Response, next: NextFunction) => {
+const loginUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try{
         const emailFromUser = req.body.email;

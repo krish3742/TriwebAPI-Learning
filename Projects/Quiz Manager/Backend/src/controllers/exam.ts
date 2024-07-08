@@ -1,10 +1,10 @@
-import { Request, Response, NextFunction } from "express";
+import { RequestHandler } from "express";
 import Quiz from "../models/quiz";
 import Report from "../models/report";
 import ProjectError from "../helpers/projectError";
 import { returnResponse } from "../utils/interfaces";
 
-const startExam = async (req: Request, res: Response, next: NextFunction) => {
+const startExam: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const quizId = req.params.quizId;
@@ -35,7 +35,7 @@ const startExam = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
-const finishExam = async (req: Request, res: Response, next: NextFunction) => {
+const finishExam: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const quizId = req.body._id;

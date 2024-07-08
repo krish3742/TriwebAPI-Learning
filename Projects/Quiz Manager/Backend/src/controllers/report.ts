@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction } from "express"
+import { RequestHandler } from "express"
 import Report from "../models/report";
 import ProjectError from "../helpers/projectError";
 import { returnResponse } from "../utils/interfaces";
 
-const getReport = async (req: Request, res: Response, next: NextFunction) => {
+const getReport: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         let reportId = req.params.reportId;
