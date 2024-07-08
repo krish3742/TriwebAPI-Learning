@@ -18,6 +18,10 @@ const activateAccount: RequestHandler = async (req, res, next) => {
             const err = new ProjectError("User not found!");
             err.statusCode = 404;
             throw err;
+        } else if(user.activate) {
+            const err = new ProjectError("Account already activated!");
+            err.statusCode = 409;
+            throw err;
         }
         user.activate = true;
         user.deactivate = false;
@@ -47,6 +51,10 @@ const deactivateAccount: RequestHandler = async (req, res, next) => {
         if(!user) {
             const err = new ProjectError("User not found!");
             err.statusCode = 404;
+            throw err;
+        } else if(user.deactivate) {
+            const err = new ProjectError("Account already deactivated!");
+            err.statusCode = 409;
             throw err;
         }
         user.activate = false;
