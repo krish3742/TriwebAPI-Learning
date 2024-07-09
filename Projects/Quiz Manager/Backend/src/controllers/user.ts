@@ -3,7 +3,6 @@ import User from '../models/user';
 import ProjectError from '../helpers/projectError';
 import { returnResponse } from "../utils/interfaces";
 import bcrypt from 'bcryptjs';
-import { validationResult } from "express-validator";
 
 const fetchUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
@@ -71,13 +70,6 @@ const changePassword: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
         const userId = req.body._id;
-        const validationError = validationResult(req);
-        if(!validationError.isEmpty()) {
-            const err = new ProjectError("Validation Error!");
-            err.statusCode = 422;
-            err.data = validationError.array();
-            throw err;
-        }
         if(userId != req.userId) {
             const err = new ProjectError("You are not authorized!");
             err.statusCode = 403;

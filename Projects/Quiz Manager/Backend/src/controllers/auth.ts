@@ -79,4 +79,52 @@ const isEmailExists = async (email:String) => {
     return false;
 }
 
-export {registerUser, loginUser, isEmailExists};
+const isPasswordValid = async (password: String) => {
+    if(!(password.indexOf('!') !== -1 ||
+        password.indexOf('@') !== -1 ||
+        password.indexOf('#') !== -1 ||
+        password.indexOf('$') !== -1 ||
+        password.indexOf('%') !== -1 ||
+        password.indexOf('^') !== -1 ||
+        password.indexOf('&') !== -1 ||
+        password.indexOf('*') !== -1)
+    ) {
+        return false;
+    }
+    let flag = 0;
+    for(let index = 0; index < password.length; index++) {
+        let ch = password.charAt(index);
+        if(ch >= 'a' && ch <= 'z') {
+            flag = 1;
+            break;
+        }
+    }
+    if(!flag) {
+        return false;
+    }
+    flag = 0;
+    for(let index = 0; index < password.length; index++) {
+        let ch = password.charAt(index);
+        if(ch >= 'A' && ch <= 'Z') {
+            flag = 1;
+            break;
+        }
+    }
+    if(!flag) {
+        return false;
+    }
+    flag = 0;
+    for(let index = 0; index < password.length; index++) {
+        let ch = password.charAt(index);
+        if(ch >= '0' && ch <= '9') {
+            flag = 1;
+            break;
+        }
+    }
+    if(!flag) {
+        return false;
+    }
+    return true;
+};
+
+export {registerUser, loginUser, isEmailExists, isPasswordValid};
