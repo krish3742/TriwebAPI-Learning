@@ -1,7 +1,9 @@
 import express  from "express";
-const router = express.Router();
-import { registerUser, loginUser, isEmailExists } from "../controllers/auth";
 import { body } from "express-validator";
+import { registerUser, loginUser, isEmailExists } from "../controllers/auth";
+import { isPasswordValid } from "../controllers/auth";
+import { validationRequest } from "../helpers/validationRequest";
+const router = express.Router();
 
 //POST /auth
 router.post("/", [
@@ -28,7 +30,17 @@ router.post("/", [
     body('password')
         .trim()
         .isLength({min: 8})
-        .withMessage("Enter atleast 8 characters password!"),
+        .custom(async (newPassword: String) => {
+            return isPasswordValid(newPassword)
+                .then((status: Boolean) => {
+                    if(!status) {
+                        return Promise.reject("Enter a password having 8 character length, 1 small aplhabet, 1 capital aplhabet, 1 number, and 1 special character!");
+                    }
+                })
+                .catch((err: any) => {
+                    return Promise.reject(err);
+                })
+        }),
     body('confirm_password')
         .trim()
         .custom((confirm_password, {req}) => {
@@ -37,7 +49,7 @@ router.post("/", [
             }
             return true;
         })
-], registerUser);
+], validationRequest, registerUser);
 //POST /auth/login
 router.post("/login", loginUser);
 

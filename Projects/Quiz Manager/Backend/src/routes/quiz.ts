@@ -3,6 +3,7 @@ import { body } from 'express-validator';
 import { createQuiz, fetchQuiz, updateQuiz, deleteQuiz, publishQuiz, isQuizNameExists } from '../controllers/quiz';
 import { isAuthenticated } from '../middlewares/isAuthenticated';
 import { isDeactivated } from '../middlewares/isDeactivated';
+import { validationRequest } from '../helpers/validationRequest';
 const router = express.Router();
 //POST /quiz
 router.post('/', isAuthenticated, isDeactivated, [
@@ -37,7 +38,7 @@ router.post('/', isAuthenticated, isDeactivated, [
             }
             return true;
         })
-], createQuiz);
+], validationRequest, createQuiz);
 
 //GET /quiz/:quizId?
 router.get("/:quizId?", isAuthenticated, isDeactivated, fetchQuiz);
@@ -75,7 +76,7 @@ router.put('/', isAuthenticated, isDeactivated, [
             }
             return true;
         })
-], updateQuiz);
+], validationRequest, updateQuiz);
 
 //DELETE /quiz/:quizId
 router.delete('/:quizId', isAuthenticated, isDeactivated, deleteQuiz);

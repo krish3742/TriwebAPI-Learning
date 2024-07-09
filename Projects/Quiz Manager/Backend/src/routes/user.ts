@@ -15,11 +15,12 @@ router.put("/", isAuthenticated, isDeactivated, updateUser);
 router.put('/changepassword', isAuthenticated, isDeactivated, [
     body('newPassword')
         .trim()
+        .isLength({min: 8})
         .custom(async (newPassword: String) => {
             return isPasswordValid(newPassword)
                 .then((status: Boolean) => {
                     if(!status) {
-                        return Promise.reject("Enter a password having 1 small aplhabet, 1 capital aplhabet, 1 number, and 1 special character!");
+                        return Promise.reject("Enter a password having 8 character length, 1 small aplhabet, 1 capital aplhabet, 1 number, and 1 special character!");
                     }
                 })
                 .catch((err: any) => {

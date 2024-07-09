@@ -10,13 +10,6 @@ import { emailer } from "../helpers/emailer";
 const registerUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
     try {
-        const validationError = validationResult(req);
-        if(!validationError.isEmpty()) {
-            const err = new ProjectError("Validation Failed");
-            err.statusCode = 422;
-            err.data = validationError.array();
-            throw err;
-        }
         const name = req.body.name;
         const email = req.body.email;
         const passwordFromReq = req.body.password;
