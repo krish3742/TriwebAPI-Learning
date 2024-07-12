@@ -24,7 +24,7 @@ const activateAccount: RequestHandler = async (req, res, next) => {
             err.statusCode = 409;
             throw err;
         }
-        emailer(user.email);
+        // emailer(user.email);
         user.activate = true;
         user.deactivate = false;
         await user.save();

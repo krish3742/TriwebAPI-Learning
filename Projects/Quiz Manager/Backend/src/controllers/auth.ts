@@ -6,6 +6,7 @@ import ProjectError from "../helpers/projectError";
 import { validationResult } from "express-validator";
 import { returnResponse } from "../utils/interfaces";
 import { emailer } from "../helpers/emailer";
+import { sendEmailOtpRegister } from "./otp";
 
 const registerUser: RequestHandler = async (req, res, next) => {
     let resp: returnResponse;
@@ -14,6 +15,13 @@ const registerUser: RequestHandler = async (req, res, next) => {
         const email = req.body.email;
         const passwordFromReq = req.body.password;
         const password = await bcrypt.hash(passwordFromReq, 12);
+        const sendOtp = await sendEmailOtpRegister(email);
+        if(!sendOtp) {
+            const err =
+             new ProjectError("OTP not send!");
+            err.statusCode = 401;
+            throw err;
+        }
         const result = await User.create({name, email, password});
         resp = {
             status: "success",
@@ -42,7 +50,7 @@ const loginUser: RequestHandler = async (req, res, next) => {
             if(passwordCheck) {
                 const token = jwt.sign({userId: responseFromDb._id}, "secretKey", {expiresIn: "1h"});
                 if(!responseFromDb.activate) {
-                    emailer(responseFromDb.email);
+                    // emailer(responseFromDb.email);
                     responseFromDb.activate = true;
                     responseFromDb.deactivate = false;
                     await responseFromDb.save();
