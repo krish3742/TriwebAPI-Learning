@@ -11,15 +11,15 @@ function Register() {
                     <p className={Style.para}>use your account to register</p>
                 </div>
                 <div>
-                    <label for="Name"></label>
+                    <label htmlFor="Name"></label>
                     <input type="text" id="Name" placeholder="Name" className={Style.input}></input>
                 </div>
                 <div>
-                    <label for="Email ID"></label>
-                    <input type="text" id="Name" placeholder="Email ID" className={Style.input}></input>
+                    <label htmlFor="Email ID"></label>
+                    <input type="text" id="EmailId" placeholder="Email ID" className={Style.input}></input>
                 </div>
                 <div>
-                    <label for="Password"></label>
+                    <label htmlFor="Password"></label>
                     <input type="password" id="Password" placeholder="Password" className={Style.input}></input>
                 </div>
                 <div>

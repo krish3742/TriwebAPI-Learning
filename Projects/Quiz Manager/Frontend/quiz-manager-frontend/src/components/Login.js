@@ -10,11 +10,11 @@ function Login() {
                     <p className={Style.para}>use your registered account to login</p>
                 </div>
                 <div>
-                    <label for="Email ID"></label>
+                    <label htmlFor="Email ID"></label>
                     <input type="text" id="Name" placeholder="Email ID" className={Style.input}></input>
                 </div>
                 <div>
-                    <label for="Password"></label>
+                    <label htmlFor="Password"></label>
                     <input type="password" id="Password" placeholder="Password" className={Style.input}></input>
                 </div>
                 <div>

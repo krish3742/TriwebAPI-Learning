@@ -1,0 +1,20 @@
+.outerContainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    color: #D2CCA1;
+}
+
+.innerContainer{
+    height: 70%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FCDEBE;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.434), 0 6px 20px 0 rgba(0, 0, 0, 0.434); */
+}
