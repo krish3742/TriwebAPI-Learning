@@ -14,11 +14,23 @@ function Quiz() {
                     <input type="number" id="Question Number" placeholder="Name" className={Style.input}></input>
                 </div>
                 <div>
-                    <label htmlFor="Question">Qu</label>
+                    <label htmlFor="Question">Question</label>
                     <input type="text" id="Name" placeholder="Question" className={Style.input}></input>
                 </div>
                 <div>
-                    <label htmlFor="Options"></label>
+                    <label htmlFor="Option 1">Options 1</label>
+                    <input type="text" id="Password" placeholder="Options" className={Style.input}></input>
+                </div>
+                <div>
+                    <label htmlFor="Option 2">Options 2</label>
+                    <input type="text" id="Password" placeholder="Options" className={Style.input}></input>
+                </div>
+                <div>
+                    <label htmlFor="Option 3">Options 3</label>
+                    <input type="text" id="Password" placeholder="Options" className={Style.input}></input>
+                </div>
+                <div>
+                    <label htmlFor="Option 4">Options 4</label>
                     <input type="text" id="Password" placeholder="Options" className={Style.input}></input>
                 </div>
             </div>
