@@ -1,11 +1,11 @@
 import './App.css';
-import Board from './Components/Board';
+import Game from './Components/Game';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Board />
+        <Game />
       </header>
     </div>
   );

@@ -4,3 +4,15 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+.heading {
+    width: 17rem;
+    height: min-content;
+    background-color: rgb(20, 239, 111);
+    color: black;
+    border-radius: 25px;
+}
+
+.status {
+    margin: 0.25rem;
+}
