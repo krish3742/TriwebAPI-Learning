@@ -8,7 +8,7 @@ function HomePage() {
     const [flag, setFlag] = useState(false);
     useEffect(() => {
         axios
-            .get(`http://${process.env.REACT_APP_BACKEND_URL}/list/get`)
+            .get(`https://${process.env.REACT_APP_BACKEND_URL}/list/get`)
             .then((response) => {
                 setList(response.data.data);
             })
