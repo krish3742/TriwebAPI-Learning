@@ -8,7 +8,7 @@ function HomePage() {
     const [flag, setFlag] = useState(false);
     useEffect(() => {
         axios
-            .get("http://localhost:3002/list/get")
+            .get(`http://${process.env.REACT_APP_BACKEND_URL}/list/get`)
             .then((response) => {
                 setList(response.data.data);
             })
@@ -19,7 +19,7 @@ function HomePage() {
             _id
         };
         axios
-            .delete("http://localhost:3002/list/delete", {data: payload})
+            .delete(`http://${process.env.REACT_APP_BACKEND_URL}/list/delete`, {data: payload})
             .then((res) => {
                 setFlag(!flag);
             })
@@ -27,7 +27,7 @@ function HomePage() {
     }
     function addClick(data) {
         axios
-            .post("http://localhost:3002/list/add", data)
+            .post(`http://${process.env.REACT_APP_BACKEND_URL}/list/add`, data)
             .then((res) => {
                 setFlag(!flag);
             })
