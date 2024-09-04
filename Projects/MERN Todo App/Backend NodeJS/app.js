@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 app.use(express.json());
 const cors = require('cors');
-app.use(cors());
+app.use(cors({origin:`http://triwebapi-learning.onrender.com`,credentials:true}));
 const listRouter = require('./router/list');
 
 app.get("/", (req, res) => {
