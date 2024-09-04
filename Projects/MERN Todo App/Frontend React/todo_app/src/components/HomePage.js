@@ -19,7 +19,7 @@ function HomePage() {
             _id
         };
         axios
-            .delete(`http://${process.env.REACT_APP_BACKEND_URL}/list/delete`, {data: payload})
+            .delete(`https://${process.env.REACT_APP_BACKEND_URL}/list/delete`, {data: payload})
             .then((res) => {
                 setFlag(!flag);
             })
@@ -27,7 +27,7 @@ function HomePage() {
     }
     function addClick(data) {
         axios
-            .post(`http://${process.env.REACT_APP_BACKEND_URL}/list/add`, data)
+            .post(`https://${process.env.REACT_APP_BACKEND_URL}/list/add`, data)
             .then((res) => {
                 setFlag(!flag);
             })
