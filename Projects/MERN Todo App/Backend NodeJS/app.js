@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 app.use(express.json());
 const cors = require('cors');
-app.use(cors({origin:`http://${process.env.CORS_ORIGIN_URL}`,credentials:true}));
+app.use(cors({origin:`https://${process.env.CORS_ORIGIN_URL}`,credentials:true}));
 const listRouter = require('./router/list');
 
 app.get("/", (req, res) => {
