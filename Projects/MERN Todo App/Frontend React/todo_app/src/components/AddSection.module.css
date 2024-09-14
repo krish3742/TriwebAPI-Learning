@@ -27,3 +27,21 @@
     cursor: pointer;
     border: 1px solid brown;
 }
+
+@media screen and (max-width: 500px) {
+    .input {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .input {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .input {
+        width: 10rem;
+    }
+}

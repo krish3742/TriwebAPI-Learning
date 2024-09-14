@@ -8,9 +8,10 @@ function HomePage() {
     const [flag, setFlag] = useState(false);
     useEffect(() => {
         axios
-            .get(`https://${process.env.REACT_APP_BACKEND_URL}/list/get`)
+            .get(`${process.env.REACT_APP_BACKEND_URL}/list/get`)
             .then((response) => {
                 setList(response.data.data);
+                console.log(response);
             })
             .catch((error) => console.log(error));
     }, [flag])
@@ -19,7 +20,7 @@ function HomePage() {
             _id
         };
         axios
-            .delete(`https://${process.env.REACT_APP_BACKEND_URL}/list/delete`, {data: payload})
+            .delete(`${process.env.REACT_APP_BACKEND_URL}/list/delete`, {data: payload})
             .then((res) => {
                 setFlag(!flag);
             })
@@ -27,7 +28,7 @@ function HomePage() {
     }
     function addClick(data) {
         axios
-            .post(`https://${process.env.REACT_APP_BACKEND_URL}/list/add`, data)
+            .post(`${process.env.REACT_APP_BACKEND_URL}/list/add`, data)
             .then((res) => {
                 setFlag(!flag);
             })
