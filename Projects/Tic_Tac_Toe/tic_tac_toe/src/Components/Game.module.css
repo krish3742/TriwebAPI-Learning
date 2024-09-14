@@ -4,3 +4,9 @@
     justify-content: center;
     gap: 2rem;
 }
+
+@media screen and (max-width: 640px) {
+    .game {
+        flex-direction: column;
+    }
+}
