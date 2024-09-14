@@ -11,7 +11,6 @@ function HomePage() {
             .get(`${process.env.REACT_APP_BACKEND_URL}/list/get`)
             .then((response) => {
                 setList(response.data.data);
-                console.log(response);
             })
             .catch((error) => console.log(error));
     }, [flag])
